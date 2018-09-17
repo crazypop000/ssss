@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Log;
+use Mail;
+use App\Jobs\SendWelcomeEmail;
 
 class HomeController extends Controller
 {
@@ -25,5 +28,12 @@ class HomeController extends Controller
     {
         $request->user()->authorizeRoles(['employee', 'admin']);
         return view('home');
+    }
+    
+    public function send()
+    {
+        Log::info("Request cycle without Queues started");
+        $this->dispatch(new SendWelcomeEmail());
+        Log::info("Request cycle without Queues finished");
     }
 }

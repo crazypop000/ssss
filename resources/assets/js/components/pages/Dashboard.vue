@@ -8,6 +8,7 @@
 							<h2>
 								Welcome to our bakery
 							</h2>
+							<a href="/send" class="btn btn-default">Send Email</a>
 							<input type="file" name=""  @change="onFileChange">
 						</div>
 					</div>

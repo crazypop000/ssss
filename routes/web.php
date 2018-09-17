@@ -52,6 +52,8 @@ Route::post('/updateTool', 'ToolController@update');
 
 Route::post('/deleteTool', 'ToolController@destroy');
 
+Route::get('/send', 'HomeController@send');
+
 Route::get('/{any?}', function() {
 	return view('main');
 })->where('any', '^(.*)\/?$')->name('main');
