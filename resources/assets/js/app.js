@@ -36,6 +36,7 @@ const app = new Vue({
 	    currentUser: {}
     },
     created() {
+        console.log(this.$route.path)
     	this.getCurrentUser()
     },
     methods: {

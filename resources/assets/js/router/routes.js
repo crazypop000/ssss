@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-export default new VueRouter({
+const router = new VueRouter({
 	mode: 'history',
     // base: '/app',
     linkActiveClass: 'active',
@@ -28,6 +28,16 @@ export default new VueRouter({
 	      path: '/tools',
 	      name: 'tools',
 	      component: require('../components/pages/tools/Tool.vue')
-	    },
+	    }
     ]
 })
+
+router.beforeEach((to, from, next) => {
+    if (!to.matched.length && to.fullPath !== '/login') {
+        router.back()
+    } else {
+        next();
+    }
+})
+
+export default router
