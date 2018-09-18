@@ -9,6 +9,7 @@
     <link href="//cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css" rel="stylesheet">
     <link href="/css/lib/pe-icon-7-stroke.min.css" rel="stylesheet"/>
     <link href="/css/lib/light-bootstrap-dashboard.min.css" rel="stylesheet"/>
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
 </head>
 <body>
 	<div id="app">
