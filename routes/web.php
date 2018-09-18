@@ -56,6 +56,6 @@ Route::get('/send', 'HomeController@send');
 
 Route::get('/{any?}', function() {
 	return view('main');
-})->where('any', '^(.*)\/?$')->name('main');
+})->where('any', '^(.*)\/?$')->name('main')->middleware('auth');
 
 
