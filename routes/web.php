@@ -38,7 +38,7 @@ Route::post('/deleteMaterial', 'MaterialController@delete');
 Route::match(['get', 'post'], '/logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('/currentUser', function() {
-	return Auth::user()->load('roles');
+	return Auth::user() ? Auth::user()->load('roles') : 'Not authenticated';
 });
 
 Route::get('/historyImportExport', 'ImportExportController@index');
