@@ -13,6 +13,15 @@ class UserController extends Controller
     	return $users;
     }
 
+    public function getUsers(Request $request) {
+        $users = User::paginate(10);
+        return $users;
+    }
+
+    public function searchUser(Request $request) {
+        return User::search($request->search)->get();
+    }
+
     public function create(Request $request) {
     	$data = $request->input('user');
     	$user = new User();

@@ -10,6 +10,8 @@
     <link href="/css/lib/pe-icon-7-stroke.min.css" rel="stylesheet"/>
     <link href="/css/lib/light-bootstrap-dashboard.min.css" rel="stylesheet"/>
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
 </head>
 <body>
 	<div id="app">

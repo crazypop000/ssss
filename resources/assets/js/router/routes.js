@@ -11,9 +11,14 @@ const router = new VueRouter({
 	    // { path: '/', redirect: '/pages' },
 	    {
 	      path: '/',
-	      name: 'dashboard',
-	      component: require('../components/pages/Dashboard.vue')
+	      name: 'search',
+	      component: require('../components/pages/Search.vue')
 	    },
+	    // {
+	    //   path: '/',
+	    //   name: 'dashboard',
+	    //   component: require('../components/pages/Dashboard.vue')
+	    // },
 	    {
 	      path: '/materials',
 	      name: 'materials',

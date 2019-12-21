@@ -13,11 +13,15 @@
 
 Route::get('/', function () {
     return view('main');
-})->middleware('auth');
+});
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/getUsers', 'UserController@getUsers');
+
+Route::post('/searchUser', 'UserController@searchUser');
 
 Route::get('/users', 'UserController@index');
 
@@ -55,6 +59,6 @@ Route::get('/send', 'HomeController@send');
 
 Route::get('/{any?}', function() {
 	return view('main');
-})->where('any', '^(.*)\/?$')->name('main')->middleware('auth');
+})->where('any', '^(.*)\/?$')->name('main');
 
 
